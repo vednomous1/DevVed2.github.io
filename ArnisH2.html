@@ -142,8 +142,52 @@
             color: #12632b;
         }
 
+        /* About section: use poster.jpg as the profile/photo and gallbanner.jpg as a subtle background */
+        .about-section {
+            position: relative;
+            padding: 60px 8%;
+            color: white;
+            background-image: linear-gradient(rgba(6,27,12,0.65), rgba(18,99,43,0.65)), url('gallbanner.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-inner {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about-photo {
+            width: 320px;
+            max-width: 90%;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 6px 30px #0008;
+            border: 4px solid rgba(255,255,255,0.12);
+        }
+
+        .about-text {
+            max-width: 640px;
+            text-align: left;
+        }
+
+        .about-text h2 {
+            color: #fff9;
+        }
+
+        .about-text p {
+            color: rgba(255,255,255,0.95);
+            line-height: 1.7;
+        }
+
         #contact {
             background: #e1e8df;
+            color: #101810;
         }
 
         footer {
@@ -225,6 +269,18 @@
             nav {
                 gap: 15px;
             }
+
+            .about-inner {
+                flex-direction: column;
+            }
+
+            .about-photo {
+                width: 80%;
+            }
+
+            .about-text {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -268,24 +324,32 @@
             <a href="about.html" class="button">MEET OUR TEAM</a>
         </div>
 
-        <section id="about">
-            <h2>ABOUT OUR TEAM</h2>
-            <p>
-                TAU Arnis Team is built on discipline, technical skill, and the shared spirit of Filipino martial arts.
-                We train with focus, support one another, and stand proudly for our university in every competition.
-            </p>
-            <div class="cards">
-                <div class="card">
-                    <h3>Discipline</h3>
-                    <p>We train with focus, respect, and commitment in every practice.</p>
-                </div>
-                <div class="card">
-                    <h3>Skill</h3>
-                    <p>Our athletes develop precision, timing, and confidence through consistent training.</p>
-                </div>
-                <div class="card">
-                    <h3>Unity</h3>
-                    <p>We compete as one team and grow together through every challenge.</p>
+        <!-- About section: uses poster.jpg for the team photo and gallbanner.jpg as background -->
+        <section id="about" class="about-section">
+            <div class="about-inner">
+                <img class="about-photo" src="poster.jpg" alt="Team poster photo">
+
+                <div class="about-text">
+                    <h2>ABOUT OUR TEAM</h2>
+                    <p>
+                        TAU Arnis Team is built on discipline, technical skill, and the shared spirit of Filipino martial arts.
+                        We train with focus, support one another, and stand proudly for our university in every competition.
+                    </p>
+
+                    <div class="cards" style="margin-top:22px;">
+                        <div class="card" style="background: rgba(255,255,255,0.08); border-top-color: rgba(255,255,255,0.16); box-shadow: none;">
+                            <h3>Discipline</h3>
+                            <p>We train with focus, respect, and commitment in every practice.</p>
+                        </div>
+                        <div class="card" style="background: rgba(255,255,255,0.08); border-top-color: rgba(255,255,255,0.16); box-shadow: none;">
+                            <h3>Skill</h3>
+                            <p>Our athletes develop precision, timing, and confidence through consistent training.</p>
+                        </div>
+                        <div class="card" style="background: rgba(255,255,255,0.08); border-top-color: rgba(255,255,255,0.16); box-shadow: none;">
+                            <h3>Unity</h3>
+                            <p>We compete as one team and grow together through every challenge.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
